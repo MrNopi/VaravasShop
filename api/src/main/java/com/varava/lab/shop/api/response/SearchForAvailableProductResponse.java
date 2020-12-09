@@ -19,4 +19,9 @@ public class SearchForAvailableProductResponse {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    public SearchForAvailableProductResponse(String street, int quantity) {
+        this.street = street;
+        this.quantity = quantity;
+    }
 }
