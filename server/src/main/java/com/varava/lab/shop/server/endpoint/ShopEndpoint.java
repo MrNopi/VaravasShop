@@ -4,13 +4,13 @@ import com.varava.lab.shop.api.endpoint.SearchApi;
 import com.varava.lab.shop.api.request.SearchForAvailableProductRequest;
 import com.varava.lab.shop.api.response.SearchForAvailableProductResponse;
 import com.varava.lab.shop.server.service.ShopService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin
 public class ShopEndpoint implements SearchApi {
 
     private final ShopService shopService;
@@ -19,15 +19,10 @@ public class ShopEndpoint implements SearchApi {
         this.shopService = shopService;
     }
 
-    @GetMapping("/search")
-    public List<SearchForAvailableProductResponse> searchProduct(@RequestParam(value = "product") String name) {
+    @Override
+    public List<SearchForAvailableProductResponse> searchForAvailableProduct(String name) {
         SearchForAvailableProductRequest request = new SearchForAvailableProductRequest();
         request.setProductName(name);
-        return searchForAvailableProduct(request);
-    }
-
-    @Override
-    public List<SearchForAvailableProductResponse> searchForAvailableProduct(SearchForAvailableProductRequest request) {
         return shopService.searchForAvailableProduct(request);
     }
 }
