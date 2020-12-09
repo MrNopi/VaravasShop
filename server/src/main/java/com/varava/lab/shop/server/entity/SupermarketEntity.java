@@ -1,9 +1,15 @@
 package com.varava.lab.shop.server.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import com.varava.lab.shop.api.response.SearchForAvailableProductResponse;
+
+import javax.persistence.*;
 
 @Entity
+@Table(name = "supermarket")
+@SqlResultSetMapping(name = "foundProductsMapping", classes = {
+        @ConstructorResult(targetClass = SearchForAvailableProductResponse.class,
+                columns = {@ColumnResult(name = "street"), @ColumnResult(name = "quantity")})
+})
 public class SupermarketEntity {
     @Id
     private Long id;

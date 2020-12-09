@@ -1,0 +1,10 @@
+
+Q
+java:S3740"/Provide the parametrized type for this generic.(Û“ÃÀøÿÿÿÿ8Áî€Ğã.
+K
+java:S1481")Remove this unused "list" local variable.(Û“ÃÀøÿÿÿÿ8Áî€Ğã.
+]	java:S125"<This block of commented-out lines of code should be removed.(¥ëÌïûÿÿÿÿ8Áî€Ğã.
+Q
+java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ8Áî€Ğã.
+Z
+java:S1854"8Remove this useless assignment to local variable "list".(Û¢Ğ¡şÿÿÿÿ8Áî€Ğã.
