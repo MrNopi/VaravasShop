@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Good evening</title>
+</head>
+<script>
+    function getValue() {
+        const http = new XMLHttpRequest();
+        const inputVal = document.getElementById("product").value;
+        const url = "http://localhost:15073/product" + "/available/" + inputVal;
+
+        window.location = url;
+    }
+</script>
+<body>
+    <label for="product">Enter product name and hit the button to start searching</label><br>
+    <input type="text" id="product"><br>
+    <button type="button" onclick="getValue()">Search</button>
+
+</body>
+</html>

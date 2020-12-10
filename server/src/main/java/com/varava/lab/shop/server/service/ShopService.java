@@ -1,8 +1,8 @@
 package com.varava.lab.shop.server.service;
 
 import com.varava.lab.shop.api.request.SearchForAvailableProductRequest;
-import com.varava.lab.shop.api.response.SearchForAvailableProductResponse;
 import com.varava.lab.shop.server.dao.SupermarketDao;
+import com.varava.lab.shop.server.entity.ProductEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +17,7 @@ public class ShopService {
         this.supermarketDao = supermarketDao;
     }
 
-    public List<SearchForAvailableProductResponse> searchForAvailableProduct(SearchForAvailableProductRequest request) {
+    public List<ProductEntity> searchForAvailableProduct(SearchForAvailableProductRequest request) {
         return supermarketDao.searchForAvailableProductByName(request.getProductName());
     }
 }

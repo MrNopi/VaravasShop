@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Orders</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<body>
+<h1>Items: </h1>
+<table border="1">
+    <tr>
+        <th>Quantity</th>
+        <th>Street</th>
+        <th></th>
+    </tr>
+        <tr th:each="product: ${products}">
+            <td th:utext="${product.getQuantity()}">"</td>
+            <td th:utext="${product.getSupermarket().getStreet()}"></td>
+        </tr>
+</table>
+</body>
+</html>

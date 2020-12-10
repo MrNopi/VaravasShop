@@ -24,4 +24,8 @@ public class SearchForAvailableProductResponse {
         this.street = street;
         this.quantity = quantity;
     }
+
+    public SearchForAvailableProductResponse() {
+
+    }
 }
